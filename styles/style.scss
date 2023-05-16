@@ -1,0 +1,216 @@
+@import "reset";
+@import "colors";
+@import "font";
+@import "common-style";
+@import "math";
+
+body {
+  @include grid-centering;
+  height: 100%;
+  background-color: $veryLightBlue;
+}
+.summary-container {
+  @include flex-container;
+  //gap: rem(40);
+  width: rem(736);
+  height: rem(512);
+  margin: 0 auto;
+  background-color: $white;
+  border-radius: rem(32);
+}
+
+.left-container {
+  @include grid-centering;
+  text-align: center;
+  width: rem(368);
+  background: $gradDarkBlue;
+  border-radius: rem(32);
+  padding: rem(38) rem(54) rem(46);
+}
+
+.left__heading {
+  color: $lightBlue;
+  font-size: rem(24);
+  font-weight: $fw-heading-l-m;
+  line-height: 1.292;
+  margin-bottom: rem(35);
+}
+
+.left__score--circle {
+  @include grid-centering;
+  width: rem(200);
+  height: rem(200);
+  background: $gradBlueTransperant;
+  border-radius: 50%;
+  margin-bottom: rem(28);
+}
+
+.left__score {
+  display: inline-grid;
+  font-size: rem(72);
+  font-weight: $fw-heading-xl;
+  color: $white;
+  text-align: center;
+}
+
+.left__score span {
+  font-size: rem(18);
+  font-weight: $fw-heading-l-m;
+  color: $lightBlue;
+  opacity: 0.52;
+}
+
+.praise__heading {
+  font-size: rem(32);
+  font-weight: $fw-heading-l-m;
+  line-height: 1.31;
+  color: $white;
+  margin-bottom: rem(14);
+}
+
+.praise__para {
+  font-size: rem(18);
+  line-height: 1.277;
+  color: $lightBlue;
+  font-weight: $fw-body;
+}
+
+.right-container {
+  width: rem(368);
+  padding: rem(38) rem(40) rem(46);
+}
+
+.right__heading {
+  font-size: rem(24);
+  font-weight: $fw-heading-l-m;
+  line-height: 1.292;
+  color: $darkNavy;
+  margin-bottom: rem(28);
+}
+
+.score-box,
+.score-logo-name {
+  @include flex-container;
+}
+
+.score-logo-name {
+  gap: rem(12);
+}
+
+.score-box {
+  padding: rem(16);
+  border-radius: rem(12);
+  margin-bottom: rem(16);
+}
+
+.--no-margin {
+  margin-bottom: rem(41);
+}
+
+.score-name,
+.score-box__scores,
+.continue__cta {
+  font-size: rem(18);
+  font-weight: $fw-body;
+  line-height: 1.277;
+}
+
+.score-box__scores {
+  color: $darkNavy;
+  font-weight: $fw-heading-l-m;
+}
+.score-box__scores span {
+  opacity: 0.5;
+}
+
+.--reaction {
+  color: $red;
+}
+.--memory {
+  color: $yellow;
+}
+.--verbal {
+  color: $green;
+}
+.--visual {
+  color: $blue;
+}
+
+.--reaction-grad {
+  background: $gradRed;
+}
+.--memory-grad {
+  background: $gradYellow;
+}
+.--verbal-grad {
+  background: $gradGreen;
+}
+.--visual-grad {
+  background: $gradBlue;
+}
+
+.continue__cta {
+  @include grid-centering;
+  font-weight: $fw-heading-l-m;
+  color: $white;
+  background-color: $darkNavy;
+  width: 100%;
+  height: rem(56);
+  border-radius: rem(100);
+}
+
+@media (max-width: 1024px) {
+  .summary-container {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+
+  .left-container,
+  .right-container {
+    width: 100%;
+    border-radius: 0 0 rem(32) rem(32);
+  }
+
+  .left-container {
+    padding: rem(24) rem(58) rem(40);
+  }
+
+  .right-container {
+    padding: rem(24) rem(30) rem(30);
+  }
+
+  .left__heading {
+    font-size: rem(18);
+    margin-bottom: rem(24);
+  }
+
+  .left__score--circle {
+    width: rem(140);
+    height: rem(140);
+  }
+
+  .left__score {
+    font-size: rem(56);
+  }
+
+  .left__score span {
+    font-size: rem(16);
+  }
+
+  .praise__heading {
+    font-size: rem(24);
+  }
+
+  .praise__para{
+    font-size: rem(16);
+  }
+
+  .right__heading ,.continue__cta{
+    font-size: rem(18);
+  }
+
+  .score-name, .score-box__scores {
+    font-size: rem(16);
+  }
+}
