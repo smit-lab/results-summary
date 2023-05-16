@@ -159,6 +159,10 @@ body {
   border-radius: rem(100);
 }
 
+.continue__cta:hover {
+  background: $gradDarkBlue;
+}
+
 @media (max-width: 1024px) {
   .summary-container {
     flex-direction: column;
